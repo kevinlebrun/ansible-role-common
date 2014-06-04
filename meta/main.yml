@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: kevinlebrun
+  description: Common configuration for Debian / Ubuntu
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+  categories:
+    - system
+
+dependencies: []

@@ -1,0 +1,13 @@
+---
+common_packages:
+  - fail2ban
+  - vim
+  - sudo
+
+common_motd_template: "etc/motd"
+
+common_deployer_manage: True
+common_deployer_user: "ansible"
+common_deployer_group: "ansible"
+common_deployer_home: "/home/{{ common_deployer_user }}"
+common_deployer_shell: "/bin/bash"

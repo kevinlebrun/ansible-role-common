@@ -1,0 +1,4 @@
+---
+  - include: ntp.yml
+  - include: ssh.yml
+  - include: timezone.yml

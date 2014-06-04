@@ -1,0 +1,11 @@
+---
+# base on https://github.com/geerlingguy/ansible-role-apache/blob/master/.travis.yml
+language: python
+python: "2.7"
+
+install:
+  - pip install ansible==1.6.2
+
+script:
+  - "cd tests; ansible-playbook test.yml --syntax-check"
+  - "cd tests; ansible-playbook test.yml --connection=local --sudo"

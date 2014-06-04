@@ -1,0 +1,18 @@
+---
+  - name: Create ansible group
+    group: name={{ common_deployer_group }}
+
+  - name: Create ansible user
+    user: name={{ common_deployer_user }}
+          group={{ common_deployer_group }}
+          home={{ common_deployer_home }}
+          shell={{ common_deployer_shell }}
+
+  - name: Add ansible in sudoers.d
+    template: src=etc/sudoers.d/sudoer dest=/etc/sudoers.d/{{ common_deployer_user }} mode=0440
+
+  - name: Setup ansible authorized_keys
+    authorized_key: user={{ common_deployer_user }} key="{{ item }}"
+    with_file:
+      - {{ common_deployer_public_key }}
+    when: common_deployer_public_key is defined
