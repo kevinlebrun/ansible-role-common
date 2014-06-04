@@ -1,6 +1,8 @@
 Ansible Common
 ========
 
+[![Build Status](https://travis-ci.org/kevinlebrun/ansible-role-common.svg?branch=master)](https://travis-ci.org/kevinlebrun/ansible-role-common)
+
 An Ansible role that installs my common configuration on Debian / Ubuntu.
 
 Requirements
