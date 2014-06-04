@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -ev
+
+pushd tests
+
+ansible-playbook test.yml --syntax-check
+ansible-playbook test.yml --connection=local --sudo
+
+popd
