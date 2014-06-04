@@ -12,7 +12,5 @@
     template: src=etc/sudoers.d/sudoer dest=/etc/sudoers.d/{{ common_deployer_user }} mode=0440
 
   - name: Setup ansible authorized_keys
-    authorized_key: user={{ common_deployer_user }} key="{{ item }}"
+    authorized_key: user={{ common_deployer_user }} key="{{ common_deployer_public_key }}"
     when: common_deployer_public_key is defined
-    with_file:
-      - "{{ common_deployer_public_key }}"
