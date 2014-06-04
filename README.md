@@ -1,4 +1,4 @@
-Role Name
+Ansible Common
 ========
 
 An Ansible role that installs my common configuration on Debian / Ubuntu.

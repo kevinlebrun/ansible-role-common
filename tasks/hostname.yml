@@ -1,4 +1,4 @@
 ---
   - name: Set box hostname
     hostname: name={{ common_hostname }}
-    when: {{ common_hostname }} is defined
+    when: common_hostname is defined

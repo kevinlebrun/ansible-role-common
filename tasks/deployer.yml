@@ -14,5 +14,5 @@
   - name: Setup ansible authorized_keys
     authorized_key: user={{ common_deployer_user }} key="{{ item }}"
     with_file:
-      - {{ common_deployer_public_key }}
+      - "{{ common_deployer_public_key }}"
     when: common_deployer_public_key is defined

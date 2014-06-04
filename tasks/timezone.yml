@@ -1,5 +1,5 @@
 ---
   - name: Set timezone variables
     copy: content={{ timezone }} dest=/etc/timezone owner=root group=root mode=0644 backup=yes
-    when: {{ timezone }} is defined
+    when: timezone is defined
     notify: Update timezone

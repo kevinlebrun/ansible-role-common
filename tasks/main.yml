@@ -4,11 +4,12 @@
 
   - name: Install packages
     apt: pkg={{ item }} state=installed
-    with_items: {{ common_packages }}
+    with_items: 
+      - "{{ common_packages }}"
 
   - name: Install VIM as default text editor
     alternatives: name=editor path=/usr/bin/vim.basic
-    when: 'vim' is in common_packages
+    when: "'vim' in common_packages"
 
   - include: deployer.yml
     when: common_manage_deployer
